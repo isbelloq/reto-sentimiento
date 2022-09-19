@@ -1,7 +1,13 @@
-reto_sentimiento
+# Reto de analisis de sentimientos
 ==============================
 
-Reto analisis de sentimientos
+Debes tener un 30% (Balanceado) de conjunto de validación. Semilla 123 para reproducibilidad. No se requiere conjunto test.
+
+Debes usar al menos un método de reducción de dimensión.
+
+Los datos se encuentran disponibles en:
+
+https://github.com/AprendizajeProfundo/minucurso-ciencia-de-datos/blob/main/reduccion%20dimensiones/datos/tweets_public.csv
 
 Project Organization
 ------------
@@ -39,7 +45,8 @@ Project Organization
     │   │   └── make_dataset.py
     │   │
     │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
+    │   │   ├── build_features.py
+    │   │   └── processing_text.py
     │   │
     │   ├── models         <- Scripts to train models and then use trained models to make
     │   │   │                 predictions

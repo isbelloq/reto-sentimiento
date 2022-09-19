@@ -71,9 +71,15 @@ def remove_stopwords(sentences: str, stopwords: List[str]) -> str:
     sentences_no_sw = ' '.join(sentences_no_sw)
     return sentences_no_sw
 
-def remove_numbers(sentences: str):
+def remove_numbers(sentences: str) -> str:
+    '''Eliminacion de numeros'''
     clean_sentences = re.sub(r'[0-9]', ' ', sentences)
     clean_sentences = re.sub(r' +', r' ', clean_sentences)
     clean_sentences = clean_sentences.strip()
-
     return clean_sentences
+
+def remove_tokens(sentences: str, tokens: List[str]) -> str:
+    '''Funcion de eliminacion de tokens personalizados'''
+    sentences_no_tk = [word for word in sentences.split() if word not in tokens]
+    sentences_no_tk = ' '.join(sentences_no_tk)
+    return sentences_no_tk
